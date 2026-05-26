@@ -139,3 +139,24 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.section {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4);
+}
+
+.section + .section {
+  border-top: 1px solid var(--hairline);
+}
+
+.section-hero {
+  padding-top: calc(var(--nav-height) + var(--space-12));
+}
+
+main > .section:last-of-type {
+  padding-bottom: var(--space-16);
+}
