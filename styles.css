@@ -361,3 +361,62 @@ main > .section:last-of-type {
   opacity: 0.6;
   pointer-events: none;
 }
+
+/* ============================================
+   INTEGRITY
+   ============================================ */
+.integrity-layout {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.integrity-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+}
+
+.integrity-photo figcaption {
+  margin-top: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.integrity-essay {
+  max-width: 64ch;
+}
+
+.integrity-essay p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin-bottom: var(--space-3);
+}
+
+.integrity-essay p:first-of-type::first-letter {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  font-weight: 500;
+  float: left;
+  line-height: 1;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  color: var(--ink);
+}
+
+.pullquote {
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  padding: var(--space-4) 0;
+  margin: var(--space-4) 0;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--ink);
+  font-style: italic;
+  max-width: 80%;
+}
