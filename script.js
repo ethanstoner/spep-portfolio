@@ -32,6 +32,31 @@ function initActiveNav() {
   sections.forEach((s) => observer.observe(s));
 }
 
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+function initScrollReveal() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const targets = document.querySelectorAll('.section > .eyebrow, .section > h2, .section > .lede, .section > .meta-line, .scholarship-card, .integrity-layout, .reflection-body, .video-frame, .pit-pillars, .hero-photo, .section-hero .intro, .section-hero .meta');
+  targets.forEach((el) => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }
+  );
+
+  targets.forEach((el) => observer.observe(el));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
+  initScrollReveal();
 });
