@@ -420,3 +420,32 @@ main > .section:last-of-type {
   font-style: italic;
   max-width: 80%;
 }
+
+/* ============================================
+   REFLECTION
+   ============================================ */
+#reflection {
+  text-align: left;
+}
+
+#reflection > .eyebrow,
+#reflection > h2,
+#reflection > .meta-line,
+#reflection > .reflection-body {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meta-line {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin-bottom: var(--space-6);
+  letter-spacing: 0.02em;
+}
+
+.reflection-body p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-3);
+}
