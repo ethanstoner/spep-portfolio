@@ -566,3 +566,38 @@ main > .section:last-of-type {
     transform: none;
   }
 }
+
+/* ============================================
+   RESPONSIVE — Tablet (<1024px)
+   ============================================ */
+@media (max-width: 1023px) {
+  .section {
+    padding: var(--space-8) var(--space-3);
+  }
+
+  .section-hero {
+    grid-template-columns: 1fr;
+    padding-top: calc(var(--nav-height) + var(--space-8));
+  }
+
+  .hero-photo {
+    grid-column: 1;
+    grid-row: auto;
+    max-width: 360px;
+    order: -1;
+  }
+
+  .integrity-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .integrity-photo img {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .pit-pillars {
+    grid-template-columns: 1fr;
+  }
+}
