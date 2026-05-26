@@ -672,4 +672,80 @@ main > .section:last-of-type {
     gap: var(--space-2);
     text-align: center;
   }
+
+  .hero-build {
+    grid-column: 1;
+  }
+}
+
+/* ============================================
+   HERO "RECENT PROJECTS" SUBSECTION
+   ============================================ */
+.hero-build {
+  grid-column: 1;
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--hairline);
+  max-width: 64ch;
+}
+
+.eyebrow-sm {
+  font-size: 0.75rem;
+  margin-bottom: var(--space-3);
+}
+
+.build-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.build-list li {
+  display: block;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.build-list li:last-child {
+  border-bottom: none;
+}
+
+.build-list li > span {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+.build-name {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  transition: opacity 200ms var(--ease-out);
+}
+
+.build-name::after {
+  content: " ↗";
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+
+.build-name:hover {
+  opacity: 0.65;
+}
+
+.meta-link {
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+  transition: opacity 200ms var(--ease-out);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.meta-link:hover {
+  opacity: 0.7;
 }
