@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Integrity object placeholder">
+  <rect width="400" height="500" fill="#F0EFEC" />
+  <rect x="0.5" y="0.5" width="399" height="499" fill="none" stroke="rgba(0,0,0,0.08)" />
+  <text x="200" y="245" font-family="Inter, sans-serif" font-size="16" fill="#52525B" text-anchor="middle">Integrity object</text>
+  <text x="200" y="268" font-family="Inter, sans-serif" font-size="13" fill="#9CA3AF" text-anchor="middle">4:5</text>
+</svg>
