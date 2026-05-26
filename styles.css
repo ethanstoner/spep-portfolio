@@ -288,3 +288,76 @@ main > .section:last-of-type {
   border: 1px solid var(--hairline);
   border-radius: 4px;
 }
+
+/* ============================================
+   SHARED — eyebrow numbering + lede
+   ============================================ */
+.section > .eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+.section > h2 {
+  margin-bottom: var(--space-3);
+}
+
+.lede {
+  font-size: 1.125rem;
+  max-width: 56ch;
+  margin-bottom: var(--space-6);
+}
+
+/* ============================================
+   SCHOLARSHIP
+   ============================================ */
+.scholarship-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: var(--space-3);
+  max-width: 720px;
+}
+
+.card-thumb {
+  aspect-ratio: 4 / 3;
+  background: var(--bg);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--muted);
+}
+
+.card-body h3 {
+  margin-bottom: var(--space-1);
+}
+
+.card-body p {
+  font-size: 0.9375rem;
+  margin-bottom: var(--space-2);
+}
+
+.card-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+  transition: opacity 200ms var(--ease-out);
+}
+
+.card-link:hover {
+  opacity: 0.7;
+}
+
+.card-link[aria-disabled="true"] {
+  color: var(--muted);
+  opacity: 0.6;
+  pointer-events: none;
+}
