@@ -601,3 +601,75 @@ main > .section:last-of-type {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   RESPONSIVE — Mobile (<768px)
+   ============================================ */
+@media (max-width: 767px) {
+  .section {
+    padding: var(--space-6) var(--space-2);
+  }
+
+  .site-nav {
+    padding: 0 var(--space-2);
+    gap: var(--space-2);
+  }
+
+  .nav-links {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex: 1;
+    justify-content: flex-end;
+    gap: var(--space-3);
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+    font-size: 0.8125rem;
+  }
+
+  .scholarship-card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-thumb {
+    aspect-ratio: 16 / 9;
+  }
+
+  .section-hero .meta {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .section-hero .meta > div {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: var(--space-2);
+  }
+
+  .section-hero .meta > div:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .integrity-essay p:first-of-type::first-letter {
+    font-size: 2.5rem;
+  }
+
+  .pullquote {
+    font-size: 1.25rem;
+    max-width: 100%;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: var(--space-2);
+    text-align: center;
+  }
+}
