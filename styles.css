@@ -520,28 +520,6 @@ main > .section:last-of-type {
   font-weight: 600;
 }
 
-.pdf-fallback {
-  margin-top: var(--space-4);
-  font-size: 0.875rem;
-  color: var(--muted);
-  text-align: center;
-}
-
-.pdf-fallback a {
-  color: var(--accent);
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 1px;
-  transition: opacity 200ms var(--ease-out);
-}
-
-.pdf-fallback a:hover {
-  opacity: 0.7;
-}
-
-.pdf-fallback-divider {
-  margin: 0 var(--space-2);
-  color: var(--hairline);
-}
 
 .integrity-essay {
   max-width: 64ch;

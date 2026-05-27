@@ -72,12 +72,10 @@ function initEssayPager() {
   function update() {
     pages.forEach((p, i) => p.classList.toggle('active', i === idx));
     if (currentEl) currentEl.textContent = String(idx + 1);
-    if (prevBtn) prevBtn.disabled = idx === 0;
-    if (nextBtn) nextBtn.disabled = idx === pages.length - 1;
   }
 
-  function next() { if (idx < pages.length - 1) { idx++; update(); } }
-  function prev() { if (idx > 0) { idx--; update(); } }
+  function next() { idx = (idx + 1) % pages.length; update(); }
+  function prev() { idx = (idx - 1 + pages.length) % pages.length; update(); }
 
   prevBtn?.addEventListener('click', prev);
   nextBtn?.addEventListener('click', next);
