@@ -372,12 +372,22 @@ main > .section:last-of-type {
   align-items: start;
 }
 
+.integrity-photos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
 .integrity-photo img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border: 1px solid var(--hairline);
   border-radius: 4px;
+}
+
+.integrity-photos > .integrity-photo:nth-child(2) img {
+  aspect-ratio: 1 / 1;
 }
 
 .integrity-photo figcaption {
@@ -592,8 +602,19 @@ main > .section:last-of-type {
     gap: var(--space-4);
   }
 
+  .integrity-photos {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .integrity-photo {
+    max-width: 280px;
+    flex: 1 1 240px;
+  }
+
   .integrity-photo img {
-    max-width: 360px;
     margin: 0 auto;
   }
 
