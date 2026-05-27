@@ -56,7 +56,53 @@ function initScrollReveal() {
   targets.forEach((el) => observer.observe(el));
 }
 
+/* ============================================
+   ESSAY PAGER
+   ============================================ */
+function initEssayPager() {
+  const pages = document.querySelectorAll('.essay-page');
+  if (!pages.length) return;
+  const prevBtn = document.querySelector('.pager-btn[data-action="prev"]');
+  const nextBtn = document.querySelector('.pager-btn[data-action="next"]');
+  const currentEl = document.querySelector('.pager-current');
+  const totalEl = document.querySelector('.pager-total');
+  const doc = document.querySelector('.essay-doc');
+  let idx = 0;
+
+  function update() {
+    pages.forEach((p, i) => p.classList.toggle('active', i === idx));
+    if (currentEl) currentEl.textContent = String(idx + 1);
+    if (prevBtn) prevBtn.disabled = idx === 0;
+    if (nextBtn) nextBtn.disabled = idx === pages.length - 1;
+  }
+
+  function next() { if (idx < pages.length - 1) { idx++; update(); } }
+  function prev() { if (idx > 0) { idx--; update(); } }
+
+  prevBtn?.addEventListener('click', prev);
+  nextBtn?.addEventListener('click', next);
+
+  doc?.addEventListener('click', (e) => {
+    const rect = doc.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    if (x > rect.width / 2) next(); else prev();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!doc) return;
+    const docRect = doc.getBoundingClientRect();
+    const inView = docRect.top < window.innerHeight && docRect.bottom > 0;
+    if (!inView) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); prev(); }
+  });
+
+  if (totalEl) totalEl.textContent = String(pages.length);
+  update();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
   initScrollReveal();
+  initEssayPager();
 });

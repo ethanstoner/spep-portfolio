@@ -117,10 +117,16 @@
         </figure>
       </div>
 
-      <div class="essay-doc">
-        <img src="assets/essay-pages/page-1.png" alt="Integrity essay page 1" loading="lazy" />
-        <img src="assets/essay-pages/page-2.png" alt="Integrity essay page 2" loading="lazy" />
-        <img src="assets/essay-pages/page-3.png" alt="Integrity essay page 3" loading="lazy" />
+      <div class="essay-doc" aria-roledescription="essay viewer">
+        <img src="assets/essay-pages/page-1.png" alt="Integrity essay page 1" class="essay-page active" />
+        <img src="assets/essay-pages/page-2.png" alt="Integrity essay page 2" class="essay-page" />
+        <img src="assets/essay-pages/page-3.png" alt="Integrity essay page 3" class="essay-page" />
+      </div>
+
+      <div class="essay-pager" role="group" aria-label="Essay pagination">
+        <button class="pager-btn" data-action="prev" aria-label="Previous page">← Previous</button>
+        <span class="pager-indicator" aria-live="polite">Page <span class="pager-current">1</span> of <span class="pager-total">3</span></span>
+        <button class="pager-btn" data-action="next" aria-label="Next page">Next →</button>
       </div>
 
       <p class="pdf-fallback">
